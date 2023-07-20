@@ -1,0 +1,408 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: #000000;
+    color: #999;
+}
+
+a {
+    text-decoration: none;
+    color: #999999;
+}
+
+button {
+    color: #FFFFFF;
+    font-family: Orbitron;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+    cursor: pointer;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.shadow {
+    position: absolute;
+    right: 0;
+    z-index: 0;
+}
+
+.shadow::after {
+    content: ' ';
+    background: #57B8FF;
+    right: 0;
+    top: 0;
+    width: 46vw;
+    height: 1069px;
+    flex-shrink: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+.header__logo, .footer__logo {
+    width: 170px;
+    height: 48px;
+    background: url("./img/logo.png");
+    margin: 20px 60px;
+}
+
+.header__navigation {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    z-index: 2;
+}
+
+.header__link {
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.header__link:hover, .sidebar__link:hover {
+    color: #FAC422;;
+}
+
+.header__actions {
+    display: flex;
+    padding: 20px 60px;
+    z-index: 2;
+}
+
+.header__basket {
+    width: 72px;
+    height: 62px;
+    background: url("./img/basket.svg") no-repeat;
+    cursor: pointer;
+}
+
+.header__contact {
+    display: flex;
+    align-items: center;
+    border: 1px solid #FFF;
+    padding: 16px 31px;
+}
+
+.sidebar {
+    height: 989px;
+    display: flex;
+    padding: 244px 15px 300px 20px;
+    flex-direction: row-reverse;
+    gap: 50px;
+    writing-mode: vertical-rl;
+    transform: scale(-1);
+}
+
+.sidebar__link {
+    font-size: 11px;
+}
+
+.main {
+    grid-area: main;
+    flex: 2;
+}
+
+.block_header {
+    color: #FFF;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 74px; /* 115.625% */
+    text-transform: capitalize;
+    position: relative;
+}
+
+.block_header::before {
+    position: absolute;
+    top: -24px;
+    left: 40px;
+    content: 'FUTURE OF eSPORTS';
+    color: #57B8FF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 100% */
+    text-transform: uppercase;
+}
+
+.block_header::after {
+    position: absolute;
+    content: url("./img/fire.png");
+    width: 34px;
+    height: 34px;
+    top: -4.2rem;
+    left: 0;
+}
+
+.first {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    height: calc(1069px - 80px);
+}
+
+.first__info {
+    width: 656px;
+    margin: 250px 0;
+}
+
+.first__header {
+    color: #FFF;
+    font-family: Orbitron;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86px; /* 119.444% */
+    text-transform: capitalize;
+}
+
+.first__text {
+    width: 610px;
+    height: 56px;
+    margin: 45px 0 50px 0;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.first__explore_btn {
+    width: 203px;
+    height: 70px;
+    background: #57B8FF;
+}
+
+.first__view_team_btn {
+    width: 203px;
+    height: 70px;
+}
+
+.footer {
+    grid-area: footer;
+    flex: 1;
+    background: #222730;
+}
+
+.first__img {
+    position: relative;
+    margin: 215px 0;
+    width: 660px;
+    height: 518px;
+    background: url("./img/first.png");
+}
+
+.second {
+    height: 695px;
+    display: flex;
+    gap: 38px;
+    background: #2A313C;
+}
+
+.second__info {
+    width: 596px;
+    height: 530px;
+    margin: 132px 60px 83px 60px;
+}
+
+.second__text {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 38px 0 65px 0;
+}
+
+.second__img {
+    position: relative;
+    margin: 0 0 0 60px;
+    width: 596px;
+    height: 695px;
+    background: url("./img/second.png");
+}
+
+.second__slider {
+    display: flex;
+    gap: 30px;
+}
+
+.second__slider-item {
+    width: 168px;
+    height: 98px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.second__slider-item:hover {
+    box-shadow: 0 0 0 .7em #3B3D46;
+}
+
+.first_slide {
+    background: url('./img/first_slide.png'), lightgray 50% / cover no-repeat;
+}
+
+.second_slide {
+    background: url('./img/second_slide.png'), lightgray 50% / cover no-repeat;
+}
+
+.third_slide {
+    background: url('./img/third_slide.png'), lightgray 50% / cover no-repeat;
+}
+
+.third {
+    padding: 130px 60px;
+}
+
+.third__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.third__header {
+    width: 652px;
+    height: 196px;
+}
+
+.third__button {
+    width: 175px;
+    height: 70px;
+    flex-shrink: 0;
+    background: #57B8FF;
+    align-self: center;
+}
+
+.main__block-cards {
+    display: grid;
+    grid-template-areas:
+        'main first second'
+        'main third fourth'
+    ;
+}
+
+.main__block-card {
+    display: flex;
+    width: 312px;
+    height: 321px;
+    gap: 20px;
+    flex-direction: column;
+    color: #FFFFFF;
+}
+
+.main-card {
+    width: 648px;
+    height: 702px;
+    grid-area: main;
+}
+
+.first-card {
+    grid-area: first;
+}
+
+.second-card {
+    grid-area: second;
+}
+
+.third-card {
+    grid-area: third;
+}
+
+.fourth-card {
+    grid-area: fourth;
+}
+
+.card-date {
+    color: #57B8FF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 100% */
+    margin: 10px 0 0 0;
+}
+
+.card-text {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px; /* 141.667% */
+    text-transform: capitalize;
+}
+
+.main-card-text {
+    font-size: 36px;
+    line-height: 46px; /* 127.778% */
+}
+
+.card-image {
+    width: 312px;
+    height: 189px;
+    border-radius: 15px;
+}
+
+.main-card-image {
+    background: url("./img/third_block/main.png");
+    height: 510px;
+    width: 648px;
+}
+
+.first-card-image {
+    background: url("./img/third_block/first.png");
+}
+
+.second-card-image {
+    background: url("./img/third_block/second.png");
+}
+
+.third-card-image {
+    background: url("./img/third_block/third.png");
+}
+
+.fourth-card-image {
+    background: url("./img/third_block/fourth.png");
+}
+
+.footer {
+    display: flex;
+    gap: 150px;
+    padding: 130px 60px 175px 60px;
+}
+
+.footer__logo {
+    margin: 0;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 294px;
+    height: 202px;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.footer__navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__menu-title {
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0 0 25px 0;
+}
+
+.footer__link {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 37.5px; /* 250% */
+    text-transform: capitalize;
+}
+
+.footer__link:hover {
+    color: #FFFFFF;
+}
